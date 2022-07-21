@@ -133,6 +133,7 @@ def dfo_algo(puzzle, end_point):
 
             fly.dimension = tuple(fly_list)  # assign updated dimensions
             if fly == end_node:
+                fly.prev_dimensions.append(fly.dimension)
                 return fly
 
     return Fly()  # return empty fly
